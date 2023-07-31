@@ -27,9 +27,9 @@ Option 2:
 
 Option 3:
 –––––––––
-–––––––––––––––––––––––––––––––––––
-🚀 Projectile Motion Simulation 📈
-–––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––
+ 🚀 Projectile Motion Simulation 📈
+––––––––––––––––––––––––––––––––––––
 1️⃣ Start Simulation
 2️⃣ Input Parameters
 3️⃣ View Motion Graph + Data
