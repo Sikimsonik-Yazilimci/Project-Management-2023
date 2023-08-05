@@ -40,7 +40,6 @@ Option 3:
 5️⃣ Help
 6️⃣ Exit
 
-# colorful, attracts attention, not bland like the others, simple, unique relative to others
 
 
 Option 4:
@@ -60,21 +59,6 @@ Option 4:
 
 Option 5:
 –––––––––
- –––––––––––––––––––––––––––––
-|      Projectile Motion      |
-|         Simulation          |
- –––––––––––––––––––––––––––––
-  1. Start Simulation
-  2. Input Parameters
-  3. View Motion Graph + Data
-  4️. Get Simulation Data
-  5️. Help
-  6️. Exit
-
-
-
-Option 6:
-–––––––––
 |–––––––––––––––––––––––––––––––|
 |       Projectile Motion       | 
 |          Simulation           |
@@ -86,3 +70,4 @@ Option 6:
 |  5️. Help                      |
 |  6️. Exit                      |
 |–––––––––––––––––––––––––––––––|
+
