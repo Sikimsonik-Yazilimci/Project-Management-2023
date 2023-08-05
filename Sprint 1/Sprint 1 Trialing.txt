@@ -8,8 +8,9 @@ Projectile Motion Simulation
 1. Start Simulation
 2. Input Parameters
 3. View Motion Graph + Data
-4. Help
-5. Exit
+4️. Get Simulation Data
+5️. Help
+6️. Exit
 
 
 
@@ -21,8 +22,10 @@ Option 2:
 1. Start Simulation
 2. Input Parameters
 3. View Motion Graph + Data
-4. Help
-5. Exit
+4️. Get Simulation Data
+5️. Help
+6️. Exit
+
 
 
 Option 3:
@@ -33,9 +36,11 @@ Option 3:
 1️⃣ Start Simulation
 2️⃣ Input Parameters
 3️⃣ View Motion Graph + Data
-4️⃣ Help
-5️⃣ Exit
+4️⃣ Get Simulation Data
+5️⃣ Help
+6️⃣ Exit
 
+# colorful, attracts attention, not bland like the others, simple, unique relative to others
 
 
 Option 4:
@@ -47,8 +52,9 @@ Option 4:
 1. Start Simulation
 2. Input Parameters
 3. View Motion Graph + Data
-4. Help
-5. Exit
+4️. Get Simulation Data
+5️. Help
+6️. Exit
 
 
 
@@ -61,8 +67,9 @@ Option 5:
   1. Start Simulation
   2. Input Parameters
   3. View Motion Graph + Data
-  4. Help
-  5. Exit
+  4️. Get Simulation Data
+  5️. Help
+  6️. Exit
 
 
 
@@ -75,6 +82,7 @@ Option 6:
 |  1. Start Simulation          |
 |  2. Input Parameters          |
 |  3. View Motion Graph + Data  |
-|  4. Help                      |
-|  5. Exit                      |
+|  4️. Get Simulation Data       |
+|  5️. Help                      |
+|  6️. Exit                      |
 |–––––––––––––––––––––––––––––––|
