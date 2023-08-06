@@ -66,6 +66,7 @@ while run_code:
 
     # if input is 5, sets run_code to False, terminating the program
     elif menu_input == "5":
+        print("\nThank you for using the Projectile Motion Simulation.")
         run_code = False
 
     #
