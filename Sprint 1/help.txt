@@ -1,0 +1,29 @@
+
+
+🚀 Projectile Motion Simulation - Help 📚
+
+Welcome to the Projectile Motion Simulation Help page!
+Here, you'll find useful information about the simulation and how to use the program effectively.
+
+1. What is Projectile Motion?
+   - Projectile motion is the motion of an object projected into the air, subject to the forces of gravity.
+   - The object follows a curved path known as a trajectory.
+
+2. How to Run the Simulation:
+   - To start the simulation, select option 1 from the main menu.
+   - You will be prompted to set the parameters which are angle of projection, initial velocity, and gravitational acceleration.
+   - After running the simulation the graph alongside the data of the motion will be displayed.
+   - The graph displays the projectile's path over time and provides a visual representation of its motion.
+   - The data includes time, horizontal position, vertical position, and velocity components at various time intervals.
+
+6. Important Notes:
+   - The simulation assumes no air resistance (i.e. no friction).
+   - The vertical displacement formula accounts for gravity's effect on the projectile's motion.
+   - Negative vertical displacement indicates the object is below its initial height.
+
+7. Units:
+   - Angle: Degrees
+   - Velocity: Meters per second (m/s)
+   - Gravitational Acceleration: Meters per second squared (m/s²)
+
+Enjoy exploring the motion of trajectories! 🚀
