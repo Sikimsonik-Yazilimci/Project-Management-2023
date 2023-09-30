@@ -31,46 +31,65 @@ def main_menu():
 
 
 def start_new_simulation():
+    """
+    Starts a new simulation by gathering parameter values:
+        - Launch speed
+        - Launch angle
+        - Launch height
+    """
 
     print("\n")
     print("–" * 36)
     print("  🚀 Starting a New Simulation 🚀")
     print("–" * 36)
 
+    # Obtains the value of launch speed
     while True:
         try:
-            launch_speed = float(input("Enter launch speed (in meters per second): "))
-            if launch_speed <= 0:
+            speed = float(input("Enter launch speed (in meters per second): "))
+            # if input is negative, prints invalid message and asks again
+            if speed <= 0:
                 print("    ⚠️ Invalid input. Speed must be a positive number\n")
-                launch_speed = float(input("Enter launch speed (in meters per second): "))
+                speed = float(input("Enter launch speed (in meters per second): "))
             break
+        # if input is invalid, prints a message
         except ValueError:
             print("    ⚠️ Invalid input. Enter a valid positive number for speed\n")
 
+    # Obtains the value of launch angle
     while True:
         try:
-            launch_angle = float(input("Enter launch angle (in degrees): "))
-            if launch_angle <= 0 or launch_angle >= 90:
+            angle = float(input("Enter launch angle (in degrees): "))
+            # if input is zero or less, and/or is greater than or equal to 90,
+            # prints invalid message and asks again
+            if angle <= 0 or angle >= 90:
                 print("    ⚠️ Invalid input. Angle must be a positive number less than 90 degrees\n")
-                launch_angle = float(input("Enter launch angle (in degrees): "))
+                angle = float(input("Enter launch angle (in degrees): "))
             break
+        # if input is invalid, prints a message
         except ValueError:
             print("    ⚠️ Invalid input. Enter a valid positive number for angle\n")
 
+    # Obtains the value of launch height
     while True:
         try:
-            launch_height = float(input("Enter launch height (in meters): "))
-            if launch_height < 0:
+            height = float(input("Enter launch height (in meters): "))
+            # if input is negative, prints invalid message and asks again
+            if height < 0:
                 print("    ⚠️ Invalid input. Height cannot hold a negative value\n")
-                launch_height = float(input("Enter launch height (in meters): "))
+                height = float(input("Enter launch height (in meters): "))
             break
+        # if input is invalid, prints a message
         except ValueError:
             print("    ⚠️ Invalid input. Enter a valid positive number for height\n")
 
+    # Prints the gathered parameter values
     print("\nParameter Values for Simulation:")
-    print("Launch Speed:", launch_speed, "m/s")
-    print("Launch Angle:", launch_angle, "degrees")
-    print("Launch Height:", launch_height, "m")
+    print("Launch Speed:", speed, "m/s")
+    print("Launch Angle:", angle, "degrees")
+    print("Launch Height:", height, "m")
+
+    return speed, angle, height
 
 
 def help():
@@ -96,7 +115,7 @@ while run_code:
 
     # if input is 1, calls function to start new simulation
     if menu_input == "1":
-        start_new_simulation()
+        speed, angle, height = start_new_simulation()
 
     # if input is 2, calls function to display motion graph and data
     elif menu_input == "2":
