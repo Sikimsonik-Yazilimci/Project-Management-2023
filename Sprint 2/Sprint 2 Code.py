@@ -1,8 +1,9 @@
+import math
+import matplotlib.pyplot as plt
 
 menu_answers = ['1', '2', '3', '4', '5']  # accepted inputs for main menu
-speed = 0
-angle = 0
-height = 0
+
+G = 9.81  # m/s^2
 
 
 def main_menu():
@@ -92,6 +93,37 @@ def start_new_simulation():
     return speed, angle, height
 
 
+def calculate_projectile_motion(speed, angle, height):
+
+    # Converts angle from degrees to radians
+    angle_rad = math.radians(angle)
+
+    initial_velocity_x_component = speed * math.cos(angle_rad)
+    initial_velocity_y_component = speed * math.sin(angle_rad)
+
+    flight_duration = 2 * initial_velocity_y_component / G
+
+    max_height = height + (initial_velocity_y_component**2 / (2 * G))
+
+    horizontal_range = speed**2 * math.sin(2 * angle_rad) / G
+
+    motion_data = {}
+
+    time_increments = flight_duration / 100  # 100 time points for smoother graph
+    for time in range(101):
+        time = time * time_increments
+
+        distance_t = initial_velocity_x_component * time
+        height_t = (initial_velocity_y_component * time) - (0.5 * G * time**2)
+
+        if height_t >= 0:
+            motion_data[distance_t] = height_t
+    
+    print()
+
+    return motion_data
+
+
 def help():
     """
     Displays the help menu, explaining the program
@@ -119,7 +151,7 @@ while run_code:
 
     # if input is 2, calls function to display motion graph and data
     elif menu_input == "2":
-        print()
+        motion_data = calculate_projectile_motion(speed, angle, height)
 
     # if input is 3, calls function to export motion data as file
     elif menu_input == "3":
