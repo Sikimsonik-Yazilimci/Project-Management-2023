@@ -136,12 +136,18 @@ def calculate_projectile_motion(speed, angle, height):
 
 
 def graph_projectile_motion():
+    """
+    Plots the projectile motion graph using matplotlib.
+    """
 
+    # creating a list of the x and y values using motion_data dictionary
     x_values = list(motion_data.keys())
     y_values = list(motion_data.values())
 
+    # plotting graph
     plt.plot(x_values, y_values, marker="o", linestyle="solid")
 
+    # labeling the graph axis and title
     plt.title("Projectile Motion Displacement Graph")
     plt.xlabel("Distance (m)")
     plt.ylabel("Height (m)")
