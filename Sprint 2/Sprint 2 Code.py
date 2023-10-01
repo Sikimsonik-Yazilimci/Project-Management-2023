@@ -170,14 +170,13 @@ def help():
 
 
 run_code = True
+parameter_set = False
 
 # running code as long as run_code = True
 while run_code:
 
     main_menu()  # displaying the menu
     menu_input = input("➡️ Enter a choice: ").strip()
-
-    parameter_set = False
 
     # if input is 1, calls function to start new simulation
     if menu_input == "1":
