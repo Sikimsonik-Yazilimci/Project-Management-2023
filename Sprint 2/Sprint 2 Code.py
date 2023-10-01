@@ -177,14 +177,22 @@ while run_code:
     main_menu()  # displaying the menu
     menu_input = input("➡️ Enter a choice: ").strip()
 
+    parameter_set = False
+
     # if input is 1, calls function to start new simulation
     if menu_input == "1":
         speed, angle, height = start_new_simulation()
+        parameter_set = True
 
     # if input is 2, calls function to display motion graph and data
     elif menu_input == "2":
-        motion_data, flight_duration, max_height, horizontal_range = calculate_projectile_motion(speed, angle, height)
-        graph_projectile_motion()
+        # if parameters have been set, displays projectile motion –
+        # else displays an appropriate message
+        if not parameter_set:
+            print("    ⚠️ Please start a new simulation (option 1) first")
+        else:
+            motion_data, flight_duration, max_height, horizontal_range = calculate_projectile_motion(speed, angle, height)
+            graph_projectile_motion()
 
     # if input is 3, calls function to export motion data as file
     elif menu_input == "3":
