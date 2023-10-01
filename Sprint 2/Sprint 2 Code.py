@@ -126,13 +126,28 @@ def calculate_projectile_motion(speed, angle, height):
         time = time * time_increments
 
         distance_t = initial_velocity_x_component * time
-        height_t = (initial_velocity_y_component * time) - (0.5 * G * time**2)
+        height_t = height + (initial_velocity_y_component * time) - (0.5 * G * time**2)
 
         # motion data is added to dictionary until projectile hits the ground
         if height_t >= 0:
             motion_data[distance_t] = height_t
 
     return motion_data, flight_duration, max_height, horizontal_range
+
+
+def graph_projectile_motion():
+
+    x_values = list(motion_data.keys())
+    y_values = list(motion_data.values())
+
+    plt.plot(x_values, y_values, marker="o", linestyle="solid")
+
+    plt.title("Projectile Motion Displacement Graph")
+    plt.xlabel("Distance (m)")
+    plt.ylabel("Height (m)")
+    plt.grid(True)
+
+    plt.show()
 
 
 def help():
@@ -163,6 +178,7 @@ while run_code:
     # if input is 2, calls function to display motion graph and data
     elif menu_input == "2":
         motion_data, flight_duration, max_height, horizontal_range = calculate_projectile_motion(speed, angle, height)
+        graph_projectile_motion()
 
     # if input is 3, calls function to export motion data as file
     elif menu_input == "3":
