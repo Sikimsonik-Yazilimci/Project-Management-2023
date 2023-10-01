@@ -86,6 +86,7 @@ def start_new_simulation():
 
     # Prints the gathered parameter values
     print("\nParameter Values for Simulation:")
+    print("–" * 32)
     print("Launch Speed:", speed, "m/s")
     print("Launch Angle:", angle, "degrees")
     print("Launch Height:", height, "m")
@@ -94,21 +95,32 @@ def start_new_simulation():
 
 
 def calculate_projectile_motion(speed, angle, height):
+    """
+    Calculates projectile motion using physics equations.
+    Returns motion data for plotting the motion graph.
+    Also calculates and returns total flight duration, maximum height, and horizontal range.
+    """
 
     # Converts angle from degrees to radians
     angle_rad = math.radians(angle)
 
+    # calculates initial x and y velocity components
     initial_velocity_x_component = speed * math.cos(angle_rad)
     initial_velocity_y_component = speed * math.sin(angle_rad)
 
+    # calculates total time of flight of projectile
     flight_duration = 2 * initial_velocity_y_component / G
 
+    # calculates maximum height reached by projectile
     max_height = height + (initial_velocity_y_component**2 / (2 * G))
 
+    # calculates horizontal range of projectile
     horizontal_range = speed**2 * math.sin(2 * angle_rad) / G
 
+    # dictionary for storing motion data x and y (displacement) values at time increments
     motion_data = {}
 
+    # Loop calculates motion at each time increment
     time_increments = flight_duration / 100  # 100 time points for smoother graph
     for time in range(101):
         time = time * time_increments
@@ -116,12 +128,11 @@ def calculate_projectile_motion(speed, angle, height):
         distance_t = initial_velocity_x_component * time
         height_t = (initial_velocity_y_component * time) - (0.5 * G * time**2)
 
+        # motion data is added to dictionary until projectile hits the ground
         if height_t >= 0:
             motion_data[distance_t] = height_t
-    
-    print()
 
-    return motion_data
+    return motion_data, flight_duration, max_height, horizontal_range
 
 
 def help():
@@ -151,7 +162,7 @@ while run_code:
 
     # if input is 2, calls function to display motion graph and data
     elif menu_input == "2":
-        motion_data = calculate_projectile_motion(speed, angle, height)
+        motion_data, flight_duration, max_height, horizontal_range = calculate_projectile_motion(speed, angle, height)
 
     # if input is 3, calls function to export motion data as file
     elif menu_input == "3":
