@@ -142,7 +142,7 @@ def display_motion_data():
         - maximum height
         - horizontal range
     """
-    
+
     print("\nMotion Data:")
     print("–" * 12)
     print("Total Flight Time:", f'{flight_duration:.2f}', "s")
@@ -177,7 +177,7 @@ def export_data():
     """
 
     # creating a file and adding motion data
-    with open("motion_data", 'w') as file:
+    with open("motion_data_export", 'w') as file:
         file.write("Motion Data:\n")
         file.write("Distance (m), Height (m)\n")
         # loop iterates through motion_data dictionary,
@@ -254,3 +254,5 @@ while run_code:
     # if input is invalid, prints an appropriate message
     else:
         print("    ⚠️ Sorry that is not a valid choice!")
+
+print("\nThank you for using this Projectile Motion Simulation.")
