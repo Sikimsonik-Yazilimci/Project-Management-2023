@@ -145,13 +145,12 @@ def graph_projectile_motion():
     y_values = list(motion_data.values())
 
     # plotting graph
-    plt.plot(x_values, y_values, marker="o", linestyle="solid")
+    plt.plot(x_values, y_values, marker=".", linestyle=" ")
 
     # labeling the graph axis and title
     plt.title("Projectile Motion Displacement Graph")
     plt.xlabel("Distance (m)")
     plt.ylabel("Height (m)")
-    plt.grid(True)
 
     plt.show()
 
