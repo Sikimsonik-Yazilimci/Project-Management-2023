@@ -15,10 +15,12 @@ Sprint 1:
 Sprint 2:
 
     Development of value input for simulation parameters
-    Development of visualisation (graph) of motion
-    Development of displaying motion data
+    Development of graphical representation of projectile motion using Matplotlib
 
 Sprint 3 (final):
 
-    Development of visualisation (graph) of motion with friction
-    Development of displaying motion data with friction
+    Development of displaying projectile motion statistics, including:
+        - Total flight time
+        - Maximum height
+        - Horizontal range
+    Development of exporting motion data and statistics as a text file
