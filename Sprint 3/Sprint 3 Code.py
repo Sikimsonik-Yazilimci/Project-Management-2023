@@ -136,6 +136,13 @@ def calculate_projectile_motion(speed, angle, height):
 
 
 def display_motion_data():
+    """
+    function displays the motion data, including:
+        - total flight time
+        - maximum height
+        - horizontal range
+    """
+    
     print("\nMotion Data:")
     print("–" * 12)
     print("Total Flight Time:", f'{flight_duration:.2f}', "s")
@@ -165,14 +172,21 @@ def graph_projectile_motion():
 
 
 def export_data():
+    """
+    Exports motion data, flight duration, max height, and horizontal range to a text file.
+    """
 
+    # creating a file and adding motion data
     with open("motion_data", 'w') as file:
         file.write("Motion Data:\n")
         file.write("Distance (m), Height (m)\n")
+        # loop iterates through motion_data dictionary,
+        # adding the displacement (x and y) values to the text file
         for distance, height in motion_data.items():
             file.write(f"{distance}, {height}\n")
         file.write("\n")
 
+        # adding flight statistics to motion_data text file
         file.write("Flight Information:\n")
         file.write(f"Total Flight Time: {flight_duration} seconds\n")
         file.write(f"Maximum Height: {max_height} meters\n")
