@@ -1,0 +1,46 @@
+
+Approach 1:
+%%%%%%%%%%%
+
+motion_data.txt
+---------------
+Motion Data:
+Distance (m), Height (m)
+0.0, 20.0
+1.0, 15.0
+...
+
+Flight Information:
+Total Flight Time: 10 seconds
+Maximum Height: 25 meters
+Horizontal Range: 50 meters
+
+
+
+Approach 2:
+%%%%%%%%%%%
+
+motion_data.txt
+---------------
+Distance (m), Height (m)
+0.0, 20.0
+1.0, 15.0
+...
+
+flight_info.txt
+---------------
+Total Flight Time: 10 seconds
+Maximum Height: 25 meters
+Horizontal Range: 50 meters
+
+
+
+Approach 3:
+%%%%%%%%%%%
+
+motion_data.txt
+---------------
+10, 25, 50
+
+0.0, 20.0
+1.0, 15.0
