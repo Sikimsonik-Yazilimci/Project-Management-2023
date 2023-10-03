@@ -13,8 +13,7 @@ Here, you'll find useful information about the simulation and how to use the pro
    - To start the simulation, select option 1 from the main menu.
    - You will be prompted to set the parameters which are angle of projection, initial velocity, and gravitational acceleration.
    - After running the simulation the graph alongside the data of the motion will be displayed.
-   - The graph displays the projectile's path over time and provides a visual representation of its motion.
-   - The data includes time, horizontal position, vertical position, and velocity components at various time intervals.
+   - The graph displays the projectile's displacement over time and provides a visual representation of its motion.
 
 6. Important Notes:
    - The simulation assumes no air resistance (i.e. no friction).
